@@ -102,6 +102,36 @@ const defaultPatterns = {
     "Navigating a breakup requires support. Let's explore ways to heal and take care of yourself during this time.",
     "Breakups are a significant life change. What are some positive steps you've taken to care for yourself since the breakup?"
   ],
+  "(.*)(help|assistance)(.*)": [
+    "Of course, I'm here to help. What do you need assistance with?",
+    "Certainly, I can assist you. Please let me know what you need help with.",
+    "I'm here to provide support. What can I do for you?",
+    "I'm here to help. How can I assist you today?"
+  ],
+  "(.*)(feel|feeling)(.*)": [
+    "Feelings are important. Can you tell me more about what you're feeling?",
+    "I'm here to listen. How are your emotions affecting you?",
+    "Emotions are complex. Let's explore how you're feeling and why.",
+    "Feelings are a natural part of being human. Let's discuss what's on your mind."
+  ],
+  "(.*)(life|daily life|day)(.*)": [
+    "Life can be interesting. What's been happening in your daily life?",
+    "Daily life can have its ups and downs. How's your day been?",
+    "Let's talk about your day. What's been on your mind?",
+    "Life is full of experiences. What's been noteworthy in your daily routine?"
+  ],
+  "(.*)(opinion|think)(.*)": [
+    "Opinions vary. What do you think about this?",
+    "Your perspective matters. How do you feel about this topic?",
+    "Opinions can be diverse. What's your take on the matter?",
+    "Everyone has opinions. Share your thoughts with me."
+  ],
+  "(.*)(goodbye|bye|farewell)(.*)": [
+    "Goodbyes are bittersweet. Take care!",
+    "Farewell for now. If you need me, I'm here.",
+    "Until next time. Remember, I'm just a message away.",
+    "Goodbye! Don't hesitate to reach out again."
+  ]
 };
 
 module.exports = defaultPatterns;
