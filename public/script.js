@@ -1,6 +1,11 @@
-const chatBox = document.getElementById('chat-box');
-const userInput = document.getElementById('user-input');
-const sendButton = document.getElementById('send-button');
+const chatBox = document.getElementById('chatBox');
+const userInput = document.getElementById('userInput');
+const sendButton = document.getElementById('sendButton');
+
+document.addEventListener("DOMContentLoaded", function() {
+  const initialMessage = "Hello! How can I assist you today?";
+  addMessage('ELIZA', initialMessage, 'received');
+});
 
 sendButton.addEventListener('click', async () => {
   const userMessage = userInput.value;
@@ -10,6 +15,12 @@ sendButton.addEventListener('click', async () => {
 
     const response = await sendMessageToEliza(userMessage);
     addMessage('ELIZA', response);
+  }
+});
+
+userInput.addEventListener('keyup', async (event) => {
+  if (event.key === 'Enter') {
+    sendButton.click();
   }
 });
 
@@ -28,7 +39,9 @@ async function sendMessageToEliza(message) {
 
 function addMessage(sender, message) {
   const messageElement = document.createElement('div');
+  messageElement.className = 'message';
   messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+  messageElement.classList.add(sender.toLowerCase());
   chatBox.appendChild(messageElement);
   chatBox.scrollTop = chatBox.scrollHeight;
 }

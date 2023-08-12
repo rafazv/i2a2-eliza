@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ELIZA Chatbot</title>
+  <title>Dr. Eliza</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="./logo.png">
 </head>
-
 <body>
-  <div class="chat-container">
-    <div class="chat-box" id="chat-box"></div>
-    <div class="input-container">
-      <input type="text" id="user-input" placeholder="Type your message...">
-      <button id="send-button">Send</button>
+  <div class="container">
+    <header>
+      <img src="./logo.png" class="logo" alt="Logo">
+      <h1>Welcome to Dr. Eliza</h1>
+      <p>Discover a safe space for sharing your thoughts</p>
+    </header>
+    <div class="chat">
+      <div class="chat-log" id="chatBox">
+      </div>
+      <div class="input-container">
+        <input type="text" id="userInput" placeholder="Type your message..." />
+        <button id="sendButton">Send</button>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
-
 </html>

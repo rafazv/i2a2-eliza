@@ -19,9 +19,9 @@ const defaultPatterns = {
     "Goodbye.",
     "Have a great day!"
   ],
-  '(hello|hi)': [
-    "Hi, how are you feeling today?"
-  ],
+  // '(hello|hi)': [
+  //   "Hi, how are you feeling today?"
+  // ],
   '.*What can you do\\?': [
     "I can help you with a variety of topics. Just ask me anything!"
   ],
