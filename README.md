@@ -1,4 +1,4 @@
-# Dr.Eliza - Chatbot
+# Dr. Eliza - Chatbot
 
 ![Project Logo](./public/logo.png)
 
@@ -14,7 +14,7 @@
 
 ## About the Project
 
-The Dr.Eliza - Chatbot is a web-based application that provides users with a platform to engage in therapeutic conversations. Based on the Eliza algorithm, the chatbot offers responses and reflections to users' input, creating a supportive environment for discussing emotions, thoughts, and concerns.
+The Dr. Eliza - Chatbot is a web-based application that provides users with a platform to engage in therapeutic conversations. Based on the Eliza algorithm, the chatbot offers responses and reflections to users' input, creating a supportive environment for discussing emotions, thoughts, and concerns.
 
 The project integrates technologies such as Node.js and Express.js for the backend and OpenAI API for advanced language processing. The front end is developed using HTML, CSS, and JavaScript to provide a user-friendly interface for interaction.
 
