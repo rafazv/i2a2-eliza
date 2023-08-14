@@ -4,7 +4,7 @@
   "description": "Engage in therapeutic conversations with the Dr. Eliza - Chatbot. A web-based application built with Node.js, Express.js, and OpenAI API.",
   "main": "server.js",
   "scripts": {
-    "start": "node -r dotenv/config server.js"
+    "start": "node -r dotenv/config src/server.js"
   },
   "keywords": ["chatbot", "virtual psychologist", "therapy", "mental health", "conversations", "Eliza", "Node.js", "Express.js", "OpenAI API"],
   "author": "Rafaela Lima",

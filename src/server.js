@@ -1,4 +1,4 @@
-const defaultPatterns = require('./defaultPatterns');
+const defaultPatterns = require('../defaultPatterns');
 const express = require('express');
 const cors = require('cors');
 

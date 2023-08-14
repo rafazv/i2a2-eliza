@@ -25,7 +25,7 @@ userInput.addEventListener('keyup', async (event) => {
 });
 
 async function sendMessageToEliza(message) {
-  const response = await fetch('http://localhost:3000/eliza', {
+  const response = await fetch('https://i2a2-eliza.vercel.app/eliza', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
