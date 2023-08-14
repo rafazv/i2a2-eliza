@@ -9,11 +9,6 @@ const defaultPatterns = {
     "Perhaps eventually I will {0}.",
     "Do you really want me to {0}?"
   ],
-  '.*\\?': [
-    "Why do you ask that?",
-    "Please consider whether you can answer your own question.",
-    "Perhaps the answer lies within yourself."
-  ],
   '.*quit': [
     "Thank you for talking with me.",
     "Goodbye.",
@@ -22,6 +17,27 @@ const defaultPatterns = {
   // '(hello|hi)': [
   //   "Hi, how are you feeling today?"
   // ],
+  '(yes|yeah|yup|sure|absolutely|exactly)': [
+    "I see. Can you tell me more about your thoughts on this?",
+    "Got it. Could you elaborate a bit further?",
+    "Thank you for sharing. Can you provide more context?",
+    "Your response is noted. Could you share additional details?",
+    "Great! Can you expand on that a bit?"
+  ],
+  '(no|nah|not really|not exactly|not really sure)': [
+    "I understand. Can you tell me more about your reasons for that?",
+    "Got it. Could you elaborate on why you feel that way?",
+    "Thank you for sharing. Can you provide more context?",
+    "Your response is noted. Could you share additional details?",
+    "I appreciate your honesty. Can you expand on your answer?"
+  ],
+  '(i\'m not sure|i don\'t know|maybe|uncertain)': [
+    "It's okay not to have a definite answer. Can you share your thoughts on both sides?",
+    "That's alright. Let's explore the options together. What are your thoughts?",
+    "I understand. Uncertainty is common. Can you provide more context?",
+    "Thank you for being honest. Can you share more about what's causing your uncertainty?",
+    "Your response is noted. Let's delve into the possibilities. What's on your mind?"
+  ],
   '.*What can you do\\?': [
     "I can help you with a variety of topics. Just ask me anything!"
   ],
@@ -131,7 +147,12 @@ const defaultPatterns = {
     "Farewell for now. If you need me, I'm here.",
     "Until next time. Remember, I'm just a message away.",
     "Goodbye! Don't hesitate to reach out again."
-  ]
+  ],
+  '.*\\?': [
+    "Why do you ask that?",
+    "Please consider whether you can answer your own question.",
+    "Perhaps the answer lies within yourself."
+  ],
 };
 
 module.exports = defaultPatterns;

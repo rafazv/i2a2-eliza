@@ -27,18 +27,29 @@ app.post('/eliza', async (req, res) => {
 
 function eliza_response(user_input) {
   for (const pattern in defaultPatterns) {
-    const regex = new RegExp(pattern, 'i');
-    const match = user_input.match(regex);
-    if (match) {
+    const exactRegex = new RegExp(`^${pattern}$`, 'i');
+    const matchExact = user_input.match(exactRegex);
+    if (matchExact) {
       const responses = defaultPatterns[pattern];
       const response = responses[Math.floor(Math.random() * responses.length)];
-      const capturedGroups = match.slice(1);
+      const capturedGroups = matchExact.slice(1);
+      return response.replace(/{(\d+)}/g, (match, index) => capturedGroups[index]);
+    }
+  }
+
+  for (const pattern in defaultPatterns) {
+    const contextRegex = new RegExp(pattern, 'i');
+    const matchContext = user_input.match(contextRegex);
+    if (matchContext) {
+      const responses = defaultPatterns[pattern];
+      const response = responses[Math.floor(Math.random() * responses.length)];
+      const capturedGroups = matchContext.slice(1);
       return response.replace(/{(\d+)}/g, (match, index) => capturedGroups[index]);
     }
   }
 
   return false;
-  // return "Sorry, I can't understand what you talking about.";
+  // return "I'm here to listen and support you.";
 }
 
 async function generate_gpt3_response(input_text) {
