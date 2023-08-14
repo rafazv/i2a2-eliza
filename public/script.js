@@ -1,3 +1,5 @@
+const apiUrl = window.location.origin;
+
 const chatBox = document.getElementById('chatBox');
 const userInput = document.getElementById('userInput');
 const sendButton = document.getElementById('sendButton');
@@ -25,7 +27,7 @@ userInput.addEventListener('keyup', async (event) => {
 });
 
 async function sendMessageToEliza(message) {
-  const response = await fetch('https://i2a2-eliza.vercel.app/eliza', {
+  const response = await fetch(`${apiUrl}/eliza`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
