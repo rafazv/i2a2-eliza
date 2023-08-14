@@ -1,16 +1,19 @@
-const defaultPatterns = require('./defaultPatterns'); // Caminho para o arquivo defaultPatterns.js
+const defaultPatterns = require('./defaultPatterns');
 const express = require('express');
 const cors = require('cors');
+
 const { Configuration, OpenAIApi } = require("openai");
 
 const app = express();
 const port = 3000;
 
+require('dotenv').config();
+
 app.use(cors());
 app.use(express.static('public'));
 app.use(express.json());
 
-const config = new Configuration({ apiKey: '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' });
+const config = new Configuration({ apiKey: process.env.OPENAI_API_KEY });
 
 
 app.post('/eliza', async (req, res) => {
